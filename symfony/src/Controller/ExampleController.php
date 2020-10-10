@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * @package App\Controller
  */
-class DefaultController
+class ExampleController
 {
     /**
      * @param PHPromService $phpromService

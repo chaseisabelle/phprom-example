@@ -10,12 +10,12 @@ docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundl
 - `make ps` alias for `docker-compose ps`
 - `make install` to install composer dependencies
 - `make upgrade` to upgrade composer dependencies
+- `make curl` to hit the `GET /metrics` endpoint
+- `make command` to run the symfony example command
 
 ---
 ### containers
 
 - `symfony` the php [symfony app](https://symfony.com)
 - `phprom` the [phprom server](https://github.com/chaseisabelle/phprom)
-
----
-###
+- 

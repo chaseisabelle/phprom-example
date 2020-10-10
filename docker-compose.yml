@@ -17,3 +17,28 @@ services:
     ports:
       - "3333:3333"
 
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    expose:
+      - 9090
+    volumes:
+      - type: bind
+        source: ./prometheus.yaml
+        target: /etc/prometheus/prometheus.yml
+    depends_on:
+      - phprom
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    depends_on:
+      - prometheus
+
+

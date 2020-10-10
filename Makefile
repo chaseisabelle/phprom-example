@@ -18,4 +18,8 @@ install:
 upgrade:
 	docker-compose exec symfony composer upgrade
 
+curl:
+	curl -vvv localhost
 
+command:
+	docker-compose exec symfony php bin/console example
