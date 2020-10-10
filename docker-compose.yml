@@ -17,10 +17,3 @@ services:
     ports:
       - "3333:3333"
 
-  redis:
-    image: redis:5.0
-    container_name: redis
-    command: redis-server
-    ports:
-      - "6379:6379"
-

@@ -4,7 +4,6 @@ WORKDIR /app/symfony
 VOLUME /app
 
 RUN pecl channel-update pecl.php.net
-RUN pecl install redis && docker-php-ext-enable redis
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 EXPOSE 80
