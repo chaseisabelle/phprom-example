@@ -1,0 +1,6 @@
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+metrics:
+    resource: '@ChaseIsabellePHPromBundle/Resources/config/routes.xml'

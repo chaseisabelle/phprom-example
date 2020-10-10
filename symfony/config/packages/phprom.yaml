@@ -1,0 +1,3 @@
+phprom:
+  address: phprom:3333
+  namespace: symfony
