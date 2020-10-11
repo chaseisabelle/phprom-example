@@ -52,3 +52,8 @@ notes:
 ### what to expect
 
 ![screenshot](grafana.png)
+
+---
+todo
+
+- automate the grafana setup process
