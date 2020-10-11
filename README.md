@@ -17,5 +17,21 @@ docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundl
 ### containers
 
 - `symfony` the php [symfony app](https://symfony.com)
+    - look in `/symfony` for the php app
 - `phprom` the [phprom server](https://github.com/chaseisabelle/phprom)
-- 
+- `prometheus` a [prometheus](https://prometheus.io/) instance
+    - see `prometheus.yaml` for configs
+    - navigate to `localhost:9090` for ui
+- `grafana`
+    1. navigate to `localhost:3000` for ui
+    2. login with
+        - username: admin
+        - password: admin
+    3. click "add data source"
+    4. select "prometheus"
+    5. set the URL to "http://prometheus:9090"
+    6. click "save & test"
+    7. click the big + on the left-hand side
+    8. click "import"
+    9. click "upload json file"
+    10. select `grafana.json`

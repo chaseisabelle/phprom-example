@@ -13,7 +13,7 @@ ps:
 	docker-compose ps
 
 install:
-	docker-compose exec symfony composer upgrade
+	docker-compose exec symfony composer install
 
 upgrade:
 	docker-compose exec symfony composer upgrade
@@ -23,3 +23,6 @@ curl:
 
 command:
 	docker-compose exec symfony php bin/console example
+
+forever:
+	./forever.sh
