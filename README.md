@@ -2,7 +2,7 @@
 docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundle)
 
 ---
-### usage
+### make
 
 - `make start` to build, install, and run
 - `make up` to build and run
@@ -24,20 +24,31 @@ docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundl
     - see `prometheus.yaml` for configs
     - navigate to `localhost:9090` for ui
 - `grafana`
-    0. run `make forever`
-    1. navigate to `localhost:3000` for ui
-    2. login with
-        - username: admin
-        - password: admin
-    3. click "add data source"
-    4. select "prometheus"
-    5. set the URL to "http://prometheus:9090"
-    6. click "save & test"
-    7. click the big + on the left-hand side
-    8. click "import"
-    9. click "upload json file"
-    10. select `grafana.json`
+    
+---    
+### usage
 
+1. run `make forever` to generate some traffic
+1. navigate to `localhost:3000` for grafana ui
+2. login with
+    - username: admin
+    - password: admin
+3. click "add data source"
+4. select "prometheus"
+5. set the URL to `http://prometheus:9090`
+    - this is required because it is running inside a docker container
+6. click "save & test"
+    - you should see a green box "success"
+7. click the big + on the left-hand side
+8. click "import"
+9. click "upload json file"
+10. select `grafana.json`
+
+notes:
+- use the "percentile" switcher in the top-left to select different latency percentiles
+- the `make forever` runs the `forever.sh` script, it continuously runs the symfony command
+
+---
 ### what to expect
 
 ![screenshot](grafana.png)
