@@ -12,6 +12,7 @@ docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundl
 - `make upgrade` to upgrade composer dependencies
 - `make curl` to hit the `GET /metrics` endpoint
 - `make command` to run the symfony example command
+- `make forever` run the command in a forever loop
 
 ---
 ### containers
@@ -23,6 +24,7 @@ docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundl
     - see `prometheus.yaml` for configs
     - navigate to `localhost:9090` for ui
 - `grafana`
+    0. run `make forever`
     1. navigate to `localhost:3000` for ui
     2. login with
         - username: admin
@@ -35,3 +37,7 @@ docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundl
     8. click "import"
     9. click "upload json file"
     10. select `grafana.json`
+
+### what to expect
+
+![screenshot](grafana.png)
