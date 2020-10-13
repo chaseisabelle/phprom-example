@@ -15,8 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
-  "iteration": 1602410091949,
+  "iteration": 1602593909283,
   "links": [],
   "panels": [
     {
@@ -115,7 +114,6 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -264,5 +262,5 @@
   "timezone": "",
   "title": "phprom symfony example",
   "uid": "ArdzvhcMz",
-  "version": 3
+  "version": 1
 }

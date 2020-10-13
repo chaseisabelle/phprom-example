@@ -38,6 +38,10 @@ services:
       - "3000:3000"
     expose:
       - 3000
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/config.ini:/etc/grafana/config.ini
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
     depends_on:
       - prometheus
 
