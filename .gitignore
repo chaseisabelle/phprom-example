@@ -12,4 +12,4 @@
 /bundles/
 
 # add any extra files you wish to leave out of the repo
-/symfony/config/packages/vestiaire_prometheus.yaml
+/symfony/composer.lock
