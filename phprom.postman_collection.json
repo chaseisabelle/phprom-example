@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "be829a6a-aeee-4fe2-85c1-99d70c35c8fa",
+		"name": "phprom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/metrics",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /register/counter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"counter\",\n    \"description\":\"test counter\",\n    \"labels\":[\n        \"foo\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/register/counter",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"register",
+						"counter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /register/histogram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"histogram\",\n    \"description\":\"test histogram\",\n    \"labels\":[\n        \"foo\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/register/histogram",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"register",
+						"histogram"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /register/summary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"summary\",\n    \"description\":\"test summary\",\n    \"labels\":[\n        \"foo\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/register/summary",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"register",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /register/gauge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"gauge\",\n    \"description\":\"test gauge\",\n    \"labels\":[\n        \"foo\"\n    ]\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/register/gauge",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"register",
+						"gauge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /record/counter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"counter\",\n    \"value\":1,\n    \"labels\":{\n        \"foo\":\"bar\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/record/counter",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"record",
+						"counter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /record/histogram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"histogram\",\n    \"value\":1,\n    \"labels\":{\n        \"foo\":\"bar\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/record/histogram",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"record",
+						"histogram"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /record/summary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"summary\",\n    \"value\":1,\n    \"labels\":{\n        \"foo\":\"bar\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/record/summary",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"record",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /record/gauge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"namespace\":\"test\",\n    \"name\":\"gauge\",\n    \"value\":1,\n    \"labels\":{\n        \"foo\":\"bar\"\n    }\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/record/gauge",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"record",
+						"gauge"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
