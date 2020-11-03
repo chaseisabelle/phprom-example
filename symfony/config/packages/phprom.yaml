@@ -1,3 +1,5 @@
 phprom:
-  address: phprom:3333
+#  address: phprom:3333
+  address: docker.for.mac.host.internal:3333
   namespace: symfony
+  api: rest

@@ -11,11 +11,18 @@ services:
     volumes:
       - ./:/app:rw,cached
 
-  phprom:
+  phprom-grpc:
     image: chaseisabelle/phprom:latest
-    container_name: phprom
+    container_name: phprom-grpc
     ports:
       - "3333:3333"
+
+  phprom-rest:
+    image: chaseisabelle/phprom:latest
+    container_name: phprom-rest
+    command: ./phprom --api=rest --address=0.0.0.0:8080
+    ports:
+      - "8080:8080"
 
   prometheus:
     image: prom/prometheus:latest
@@ -29,7 +36,7 @@ services:
         source: ./prometheus.yaml
         target: /etc/prometheus/prometheus.yml
     depends_on:
-      - phprom
+      - symfony
 
   grafana:
     image: grafana/grafana:latest
