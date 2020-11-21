@@ -1,14 +1,9 @@
-
-###> symfony/framework-bundle ###
 /symfony/.env.local
 /symfony/.env.local.php
 /symfony/.env.*.local
 /symfony/config/secrets/prod/prod.decrypt.private.php
 /symfony/var/
 /symfony/vendor/
-###< symfony/framework-bundle ###
+/symfony/composer.lock
 
 /.idea/
-
-# add any extra files you wish to leave out of the repo
-/symfony/composer.lock

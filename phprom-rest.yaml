@@ -1,0 +1,4 @@
+phprom:
+  address: phprom-rest:8888
+  api: rest
+  namespace: symfony-rest

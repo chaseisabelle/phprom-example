@@ -1,21 +1,44 @@
 version: "3.4"
 
 services:
-  symfony:
+  symfony-grpc:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: symfony
+    container_name: symfony-grpc
     ports:
       - "80:80"
     volumes:
       - ./:/app:rw,cached
+      - ./phprom-grpc.yaml:/app/symfony/config/packages/phprom.yaml
+    depends_on:
+      - phprom-grpc
 
-  phprom:
+  symfony-rest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: symfony-rest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/app:rw,cached
+      - ./phprom-rest.yaml:/app/symfony/config/packages/phprom.yaml
+    depends_on:
+      - phprom-rest
+
+  phprom-grpc:
     image: chaseisabelle/phprom:latest
-    container_name: phprom
+    container_name: phprom-grpc
     ports:
       - "3333:3333"
+
+  phprom-rest:
+    image: chaseisabelle/phprom:latest
+    container_name: phprom-rest
+    command: /phprom --address=0.0.0.0:8888 --api=rest
+    ports:
+      - "8888:8888"
 
   prometheus:
     image: prom/prometheus:latest
@@ -29,7 +52,8 @@ services:
         source: ./prometheus.yaml
         target: /etc/prometheus/prometheus.yml
     depends_on:
-      - phprom
+      - symfony-grpc
+      - symfony-rest
 
   grafana:
     image: grafana/grafana:latest
