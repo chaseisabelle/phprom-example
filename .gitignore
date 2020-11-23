@@ -1,9 +1,17 @@
-/symfony/.env.local
-/symfony/.env.local.php
-/symfony/.env.*.local
-/symfony/config/secrets/prod/prod.decrypt.private.php
-/symfony/var/
-/symfony/vendor/
-/symfony/composer.lock
+/symfony-grpc/.env.local
+/symfony-grpc/.env.local.php
+/symfony-grpc/.env.*.local
+/symfony-grpc/config/secrets/prod/prod.decrypt.private.php
+/symfony-grpc/var/
+/symfony-grpc/vendor/
+/symfony-grpc/composer.lock
+
+/symfony-rest/.env.local
+/symfony-rest/.env.local.php
+/symfony-rest/.env.*.local
+/symfony-rest/config/secrets/prod/prod.decrypt.private.php
+/symfony-rest/var/
+/symfony-rest/vendor/
+/symfony-rest/composer.lock
 
 /.idea/
