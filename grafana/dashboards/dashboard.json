@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1602593909283,
+  "iteration": 1606159277035,
   "links": [],
   "panels": [
     {
@@ -58,12 +58,12 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "histogram_quantile($percentile, sum(rate(symfony_request_latency_seconds_bucket{} [5m])) by (le, route, status))",
+          "expr": "histogram_quantile($percentile, sum(rate(symfony_grpc_request_latency_seconds_bucket{} [5m])) by (le, route, status))",
           "legendFormat": "{{route}}: {{status}}",
           "refId": "A"
         },
         {
-          "expr": "histogram_quantile($percentile, sum(rate(symfony_command_latency_seconds_bucket{} [5m])) by (le, status))",
+          "expr": "histogram_quantile($percentile, sum(rate(symfony_rest_request_latency_seconds_bucket{} [5m])) by (le, route, status))",
           "legendFormat": "command: {{status}}",
           "refId": "B"
         }
@@ -149,12 +149,12 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (route, status) (rate(symfony_request_latency_seconds_count{} [5m]))",
+          "expr": "sum by (route, status) (rate(symfony_grpc_request_latency_seconds_count{} [5m]))",
           "legendFormat": "{{route}}: {{status}}",
           "refId": "A"
         },
         {
-          "expr": "sum by (status) (rate(symfony_command_latency_seconds_count{} [5m]))",
+          "expr": "sum by (route, status) (rate(symfony_rest_request_latency_seconds_count{} [5m]))",
           "legendFormat": "command: {{status}}",
           "refId": "B"
         }
