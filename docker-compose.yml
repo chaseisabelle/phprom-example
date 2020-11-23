@@ -5,12 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: symfony-grpc
     container_name: symfony-grpc
     ports:
       - "80:80"
     volumes:
-      - ./:/app:rw,cached
-      - ./phprom-grpc.yaml:/app/symfony/config/packages/phprom.yaml
+      - ./symfony-grpc/:/app/symfony:rw,cached
     depends_on:
       - phprom-grpc
 
@@ -18,12 +18,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: symfony-rest
     container_name: symfony-rest
     ports:
-      - "8080:80"
+      - "8080:8080"
     volumes:
-      - ./:/app:rw,cached
-      - ./phprom-rest.yaml:/app/symfony/config/packages/phprom.yaml
+      - ./symfony-rest:/app/symfony:rw,cached
     depends_on:
       - phprom-rest
 
