@@ -10,6 +10,7 @@ EXPOSE 80
 
 CMD ["php", "-S", "0.0.0.0:80", "-t", "/app/symfony/public"]
 
+
 FROM php:7.3 AS symfony-rest
 
 WORKDIR /app/symfony
@@ -24,3 +25,12 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 EXPOSE 8080
 
 CMD ["php", "-S", "0.0.0.0:8080", "-t", "/app/symfony/public"]
+
+
+FROM php:7.3 AS curler
+
+COPY curler.php /etc/curler.php
+
+RUN chmod a+rx /etc/curler.php
+
+CMD ["php", "/etc/curler.php"]

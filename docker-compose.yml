@@ -69,4 +69,14 @@ services:
     depends_on:
       - prometheus
 
+  curler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: curler
+    container_name: curler
+    depends_on:
+      - symfony-grpc
+      - symfony-rest
+    restart: unless-stopped
 

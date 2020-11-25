@@ -17,7 +17,7 @@ restart:
 	make start
 
 up:
-	docker-compose up -d --build
+	docker-compose up -d --build --remove-orphans
 
 logs:
 	docker-compose logs -f
