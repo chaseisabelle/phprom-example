@@ -32,7 +32,7 @@ upgrade:
 	docker-compose exec symfony-grpc composer upgrade && docker-compose exec symfony-rest composer upgrade
 
 curl:
-	curl -vvv localhost && curl -vvv localhost:8080
+	curl -vvv localhost/metrics && curl -vvv localhost:8080/metrics
 
 command:
 	docker-compose exec symfony-grpc php bin/console example && docker-compose exec symfony-rest php bin/console example
