@@ -4,7 +4,7 @@ docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundl
 ---    
 ### usage
 
-[click here](https://youtu.be/XkTPMJzch8E) to watch screenshot
+[![example screenshot](https://www.youtube.com/watch?v=XkTPMJzch8E)](https://www.youtube.com/watch?v=XkTPMJzch8E)
 
 1. `make restart` 
 1. navigate to `localhost:3000`
