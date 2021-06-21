@@ -1,10 +1,15 @@
 # example symfony app for phprom bundle
 docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundle)
 
+---
+### servies
+
+![topology](topology.png)
+
 ---    
 ### usage
 
-[![example screenshot](https://www.youtube.com/watch?v=XkTPMJzch8E)](https://www.youtube.com/watch?v=XkTPMJzch8E)
+https://www.youtube.com/watch?v=XkTPMJzch8E
 
 1. `make restart` 
 1. navigate to `localhost:3000`

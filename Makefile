@@ -36,3 +36,6 @@ curl:
 
 command:
 	docker-compose exec symfony-grpc php bin/console example && docker-compose exec symfony-rest php bin/console example
+
+topology:
+	docker run --rm -it --name dcv -v "$(pwd)":/input pmsipilot/docker-compose-viz render -m image --force docker-compose.yml --output-file=topology.png --no-networks

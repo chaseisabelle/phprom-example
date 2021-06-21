@@ -15,3 +15,4 @@
 /symfony-rest/composer.lock
 
 /.idea/
+/.cache/
