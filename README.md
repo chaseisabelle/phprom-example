@@ -2,7 +2,7 @@
 docker example for [phprom bundle](https://github.com/chaseisabelle/phprom-bundle)
 
 ---
-### servies
+### services
 
 ![topology](topology.png)
 
