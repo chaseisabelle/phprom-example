@@ -5,6 +5,7 @@
 /symfony-grpc/var/
 /symfony-grpc/vendor/
 /symfony-grpc/composer.lock
+/symfony-grpc/symfony.lock
 
 /symfony-rest/.env.local
 /symfony-rest/.env.local.php
@@ -13,6 +14,7 @@
 /symfony-rest/var/
 /symfony-rest/vendor/
 /symfony-rest/composer.lock
+/symfony-rest/symfony.lock
 
 /.idea/
 /.cache/
