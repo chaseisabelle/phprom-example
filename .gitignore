@@ -4,8 +4,7 @@
 /symfony-grpc/config/secrets/prod/prod.decrypt.private.php
 /symfony-grpc/var/
 /symfony-grpc/vendor/
-/symfony-grpc/composer.lock
-/symfony-grpc/symfony.lock
+/symfony-grpc/*.lock
 
 /symfony-rest/.env.local
 /symfony-rest/.env.local.php
@@ -13,8 +12,7 @@
 /symfony-rest/config/secrets/prod/prod.decrypt.private.php
 /symfony-rest/var/
 /symfony-rest/vendor/
-/symfony-rest/composer.lock
-/symfony-rest/symfony.lock
+/symfony-rest/*.lock
 
 /.idea/
 /.cache/

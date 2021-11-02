@@ -9,8 +9,8 @@ stop:
 reset:
 	make stop
 	docker-compose rm -f
-	rm -rf symfony-grpc/vendor symfony-grpc/composer.lock symfony-grpc/var/*
-	rm -rf symfony-rest/vendor symfony-rest/composer.lock symfony-rest/var/*
+	rm -rf symfony-grpc/vendor symfony-grpc/*.lock symfony-grpc/var/*
+	rm -rf symfony-rest/vendor symfony-rest/*.lock symfony-rest/var/*
 
 restart:
 	make reset
